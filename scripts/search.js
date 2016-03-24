@@ -6,5 +6,8 @@ function search() {
 	{
 		document.getElementById("searchkey").innerHTML = "You are searching for: " + x.value;
 	}
+	else{
+		document.getElementById("searchkey").innerHTML = "Is necessary any key for do the search!"
+	}
 	//window.alert(5 + 6);
 }
