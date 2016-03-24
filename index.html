@@ -2,16 +2,25 @@
 <html>
 	<body style="background-color:lightgrey;text-align:center;">
 
-	<h1>DLC Search Engine</h1>
+		<div id="header">
+			<h1>DLC's search engine</h1>
+		</div>
 
-	<p id="welcome">Welcome to DLC's search engine</p>
-	<input id="searchField" type="search" autofocus="" size=60>
-	<button type="button">
-				Buscar
-			</button>
-	<p id="searchkey" value=""></p>
-		
+		<div id="search">
+			<p>Search</p>
+			<br>
+			<input id="searchField" type="search" autofocus="" size=80>
+			<br>
+			<button type="button">Buscar</button>
+		</div>
+		<div id="nav">
+			<br>
+			<p id="searchkey" value=""></p>
+			<br>
+		</div>
+	
 	</body>
+	
 	<script>
 		document.getElementById("searchField").onsearch = function() {myFunction()};
 
