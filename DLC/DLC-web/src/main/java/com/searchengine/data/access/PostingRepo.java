@@ -5,12 +5,15 @@
  */
 package com.searchengine.data.access;
 
-import com.dlc.searchengine.logic.Word;
+import com.searchengine.logic.Term;
+import java.util.List;
+import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author aacorn
  */
-public interface WordDAO {
-    void save(Word word);
+public interface PostingRepo extends CrudRepository<Term, Long>{
+    List<Term> findById(Integer id);
+    List<Term> findByWord(String word);
 }
