@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
+       bean-discovery-mode="annotated">
+    <!-- Initialization for data source -->
+   <bean id="dataSource" 
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName" value="org.sqlite.JDBC"/>
+      <property name="url" value="jdbc:sqlite:.\POSTINGDATABASE.db3"/>
+      <property name="username" value="null"/>
+      <property name="password" value="null"/>
+   </bean>
+
+   <!-- Definition for documentJDBCTemplate bean -->
+   <bean id="documentJDBCTemplate" 
+      class="com.searchengine.data.access.DocumentJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+   <!-- Definition for postingJDBCTemplate bean -->
+   <bean id="postingJDBCTemplate" 
+      class="com.searchengine.data.access.PostingJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+</beans>

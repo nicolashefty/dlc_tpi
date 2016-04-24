@@ -9,7 +9,8 @@ public class Term {
     /** Maximum Frequency in documents */
     private int maxFreq;
     /** Number of documents where this term is referenced */
-    private int nRef;    
+    private int nRef; 
+    
     private Document lastDoc;
 
     protected Term() {
@@ -35,10 +36,13 @@ public class Term {
     
     /**
      * Increase the value of the word's frequency in 1
+     * if the doc passed is no the same as the last set, 
+     * then this will be the last
      */
     public void repeatForDoc(Document doc) {
         if(!isSameDoc(doc))
         {
+            this.lastDoc = doc;
             nRef++;
         }
         else

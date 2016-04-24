@@ -5,14 +5,14 @@
  */
 package com.searchengine.test;
 
-import com.searchengine.data.access.DocumentRepo;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
+//import com.searchengine.data.access.DocumentRepo;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+//import org.springframework.boot.CommandLineRunner;
+//import org.springframework.boot.SpringApplication;
+//import org.springframework.boot.autoconfigure.SpringBootApplication;
+//import org.springframework.context.annotation.Bean;
+//import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 /**
  *
@@ -22,53 +22,53 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 public class Test {
 
     //Buscar en la otra VM
-    private static final Logger log = LoggerFactory.getLogger(Test.class);
+//    private static final Logger log = LoggerFactory.getLogger(Test.class);
 
-    public static void main(String[] args) {
-        SpringApplication.run(Test.class);
-    }
-
-//    @Bean
-//    public CommandLineRunner demo(DocumentRepo repository) {
-//        return (args) -> {
-//            // save a couple of customers
-//            repository.save(new Customer("Jack", "Bauer"));
-//            repository.save(new Customer("Chloe", "O'Brian"));
-//            repository.save(new Customer("Kim", "Bauer"));
-//            repository.save(new Customer("David", "Palmer"));
-//            repository.save(new Customer("Michelle", "Dessler"));
-//
-//            // fetch all customers
-//            log.info("Customers found with findAll():");
-//            log.info("-------------------------------");
-//            for (Customer customer : repository.findAll()) {
-//                log.info(customer.toString());
-//            }
-//            log.info("");
-//
-//            // fetch an individual customer by ID
-//            Customer customer = repository.findOne(1L);
-//            log.info("Customer found with findOne(1L):");
-//            log.info("--------------------------------");
-//            log.info(customer.toString());
-//            log.info("");
-//
-//            // fetch customers by last name
-//            log.info("Customer found with findByLastName('Bauer'):");
-//            log.info("--------------------------------------------");
-//            for (Customer bauer : repository.findByLastName("Bauer")) {
-//                log.info(bauer.toString());
-//            }
-////            log.info("");
-//        };
+//    public static void main(String[] args) {
+////        SpringApplication.run(Test.class);
 //    }
-    public void data()
-    {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("org.hsqldb.jdbcDriver");
-        dataSource.setUrl("jdbc:sqlite:.\\POSTINGDATABASE.db3");
-        dataSource.setUsername("");
-        dataSource.setPassword("");
-    }
+//
+////    @Bean
+////    public CommandLineRunner demo(DocumentRepo repository) {
+////        return (args) -> {
+////            // save a couple of customers
+////            repository.save(new Customer("Jack", "Bauer"));
+////            repository.save(new Customer("Chloe", "O'Brian"));
+////            repository.save(new Customer("Kim", "Bauer"));
+////            repository.save(new Customer("David", "Palmer"));
+////            repository.save(new Customer("Michelle", "Dessler"));
+////
+////            // fetch all customers
+////            log.info("Customers found with findAll():");
+////            log.info("-------------------------------");
+////            for (Customer customer : repository.findAll()) {
+////                log.info(customer.toString());
+////            }
+////            log.info("");
+////
+////            // fetch an individual customer by ID
+////            Customer customer = repository.findOne(1L);
+////            log.info("Customer found with findOne(1L):");
+////            log.info("--------------------------------");
+////            log.info(customer.toString());
+////            log.info("");
+////
+////            // fetch customers by last name
+////            log.info("Customer found with findByLastName('Bauer'):");
+////            log.info("--------------------------------------------");
+////            for (Customer bauer : repository.findByLastName("Bauer")) {
+////                log.info(bauer.toString());
+////            }
+//////            log.info("");
+////        };
+////    }
+//    public void data()
+//    {
+////        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+////        dataSource.setDriverClassName("org.hsqldb.jdbcDriver");
+////        dataSource.setUrl("jdbc:sqlite:.\\POSTINGDATABASE.db3");
+////        dataSource.setUsername("");
+////        dataSource.setPassword("");
+//    }
 
 }
